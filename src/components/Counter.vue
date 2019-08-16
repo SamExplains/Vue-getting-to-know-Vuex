@@ -6,16 +6,20 @@
 </template>
 
 <script>
+    import {mapMutations, mapActions} from 'vuex';
     export default {
         methods: {
-            increment() {
-                // this.$emit('updated', 1);
-                this.$store.state.counter++;
-
-            },
-            decrement() {
-                this.$store.state.counter--;
-            }
+            //Using mutations example
+            // ...mapMutations([
+            //    'increment',
+            //    'decrement'
+            // ]),
+            ...mapActions([
+               'increment',
+               'decrement'
+            ]),
         }
     }
+
+    //Using asynchronous actions
 </script>
